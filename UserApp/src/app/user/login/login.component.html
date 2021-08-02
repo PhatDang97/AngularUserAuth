@@ -1,0 +1,20 @@
+<form #form='ngForm' class="mb-4" autocomplete="off" (submit)="onSubmit(form)">
+    <div class="form-group">
+        <label>UserName</label>
+        <input type="text" class="form-control" #UserName="ngModel"
+         name="UserName" [(ngModel)]="formModel.UserName" required />
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" #Password="ngModel" 
+        name="Password" [(ngModel)]="formModel.Password" required />
+    </div>
+    <div class="row">
+        <div class="form-group mt-2 mb-2">
+            <button class="btn btn-primary w-100" type="submit"
+            [disabled]="form.invalid">
+                Login
+            </button>
+        </div>
+    </div>
+</form>

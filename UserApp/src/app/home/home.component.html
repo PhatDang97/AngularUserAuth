@@ -1,0 +1,22 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand text-light ms-5">JWT Auth System</a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/adminpanel']" 
+            routerLinkActive="router-link-active" >
+                Admin Panel
+            </a>
+        </li>
+    </ul>
+    <button class="btn btn-danger float-end me-5" (click)="onLogout()">
+        Logout
+    </button>
+</nav>
+
+<div class="card m-5" *ngIf="userDetails">
+    <ul class="list-group">
+        <li class="list-group-item"><strong>UserName: </strong>{{ userDetails.fullName }}</li>
+        <li class="list-group-item"><strong>FullName: </strong>{{ userDetails.email }}</li>
+        <li class="list-group-item"><strong>Email: </strong>{{ userDetails.userName }}</li>
+    </ul>
+</div>

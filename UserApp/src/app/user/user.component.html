@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 bg-secondary">
+            <div class="tab-header">
+                <nav class="nav nav-pills nav-fill mt-5">
+                    <a class="nav-link text-light" [routerLink]="['/user/login']" 
+                    routerLinkActive="active">Sign In</a>
+                    <a class="nav-link text-light" [routerLink]="['/user/registration']" 
+                    routerLinkActive="active" >Sign Up</a>
+                </nav>
+            </div>
+            <div class="content mt-3">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
